@@ -9,7 +9,6 @@ function App() {
   const [isConnected, setIsConnected] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState(null);
   const [copied, setCopied] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState('free');
 
   const features = [
     {
@@ -217,12 +216,7 @@ function App() {
     alert(`Opening blockchain explorer for wallet:\n${wallet}\n\nYou can view:\n• Transaction history\n• Token holdings\n• Smart contract interactions\n• Historical balance`);
   };
 
-  const handleUpgradeToPremium = () => {
-    alert('Upgrade to Premium!\n\nGet 50% off your first month:\n• Unlimited wallets\n• Advanced analytics\n• Priority support\n• Tax reporting\n\nUse code: LYNEX50\nOffer ends soon!');
-  };
-
   const handleSelectPlan = (planName) => {
-    setSelectedPlan(planName.toLowerCase());
     if (planName === 'Free') {
       setShowWalletModal(true);
     } else if (planName === 'Premium') {
